@@ -1,0 +1,65 @@
+﻿@model List<Course>
+@{
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+<div class="container border-light">
+    <div class="card border-light mb-3">
+        <div class="row g-0">
+            <div class="col-8">
+                <h2 class="card-title fs-1">Join A Course</h2>
+                <p class="card-text fs-2">Welcome @User.Identity.Name</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-outline-primary" asp-controller="User" asp-action="Profile" asp-route-id="@userId">MyProfile</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="d-flex justify-content-between text-center border border-success p-4 btn-group btn-group-lg">
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="User" asp-action="MyCourses" asp-route-id="@userId">Enrolled Courses</a>
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="User" asp-action="JoinCourse" asp-route-id="@userId">Available Courses</a>
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="Materials" asp-action="Materials" asp-route-id="@userId">Materials List</a>
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="SKills" asp-action="Skills" asp-route-id="@userId">Skills List</a>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <div class="container">
+        <div class="text-start border border-danger">
+            <p class="fs-1 fw-bold">Available Courses:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Credit</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var course in Model)
+                    {
+                        <tr>
+                            <th scope="row">@course.CourseId</th>
+                            <td>@course.Name</td>
+                            <td>@course.Description</td>
+                            <td>@course.Credit</td>
+                            <td>
+                                <a class="btn btn-outline-success" asp-action="EnrollCourse" asp-route-userId="@userId" asp-route-courseId="@course.CourseId">
+                                    Join
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}else{
+    <h2>No New Courses</h2>
+}

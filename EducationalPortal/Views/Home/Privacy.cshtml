@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form id="form1" runat="server">
+    <div class="container">
+        <h1 class="display-4">EducationalPortal</h1>
+        <img src="~/images/study.png" alt="EducationalPortal" class="img-fluid" id="logoEducationalPortal" />
+
+        <div class="mt-4" id="details">
+            <p class="lead">Created by: Mahdi Bentaleb</p>
+            <p class="lead">Generated on: @DateTime.Now.ToString("MMMM dd, yyyy HH:mm:ss") </p>
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            <strong>Admin Account:</strong> Username: mahdi | Password: password123
+        </div>
+
+        <div class="jumbotron" id="description">
+            <h2 class="display-5">Educational App System</h2>
+            <p class="lead">
+                Simple app where a user can Join Course and get skills when finished.
+            </p>
+        </div>
+
+        <div class="jumbotron" id="task">
+            <h2 class="display-5">Project Task</h2>
+            <p class="lead">
+                Implement an Education Portal program to help users improve their skills by completing various courses.
+
+                The course consists of a set of materials and a list of skills that the user will acquire after completing the course.
+
+                If several courses contain the same material, after passing this material in one course, it will be automatically enrolled in another course.
+
+                Course materials can be of three types: video materials, electronic copies of printed publications or online articles.
+
+                All types of materials have unique fields characteristic for a certain type, so for videos - it is duration and quality, for books - the author(s), the number of pages, format and year of publication, and for articles - the date of publication and the resource on which this article is located.
+
+                To create courses, the user has the appropriate functionality:
+
+                When adding a course, the user must give it a name, add a short description, add a list of materials and a corresponding list of skills that will be obtained after completing this course.
+
+                You can add materials from the list in the system (previously added) to the course or add a new one.
+
+                A course can contain a different number of materials and their number is not limited for each course.
+
+                Passing each course, the user receives a certain number of skills that are in the course. If, after completing the course, the user already has skills that are the same as in the course, then the level of these skills increases by one point.
+
+                The user also has the opportunity to view the list of courses that are available to him, the list of courses that he has completed, as well as the list of courses that are currently in the process of studying and the percentage of completion of these courses.
+
+                The user also has the opportunity to view his personal information, as well as a list of his skills and their level.
+            </p>
+        </div>
+    </div>
+</form>

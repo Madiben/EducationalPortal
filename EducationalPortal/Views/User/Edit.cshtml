@@ -1,0 +1,34 @@
+﻿@using EducationalPortal.ViewModels;
+@model ProfileEditModelView
+
+<form method="post" asp-controller="User" asp-action="Edit">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Username">Username</label>
+        <input class="form-control" asp-for="Username" placeholder="Enter Username..." />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="FirstName">FirstName</label>
+        <input class="form-control" asp-for="FirstName" placeholder="Enter FirstName..." />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="LastName">LastName</label>
+        <input class="form-control" asp-for="LastName" placeholder="Enter LastName..." />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Email">Email</label>
+        <input class="form-control" asp-for="Email" placeholder="Enter Email..." />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="text-center btn btn-success p-4">Submit</button>
+</form>
+
+<div class="container p-4">
+    <div class="d-flex justify-content-between text-center border border-success p-4 btn-group btn-group-lg">
+        <a class="btn btn-danger btn-lg" role="button" asp-controller="Auth" asp-action="ResetPassword" asp-route-id="@Model.Id">Reset Password</a>
+        <a class="btn btn-outline-warning btn-lg" role="button" asp-controller="User" asp-action="Profile" asp-route-id="@Model.Id">Back</a>
+    </div>
+</div>

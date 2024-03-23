@@ -1,0 +1,40 @@
+﻿@using EducationalPortal.DataAccess.Enums;
+@using EducationalPortal.DataAccess.Models.Entities;
+@model Video
+@{
+    ViewData["Title"] = "Add Video";
+}
+
+<form method="post" asp-controller="Materials" asp-action="EditVideo">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Description">Description</label>
+        <input class="form-control" asp-for="Description" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="DurationInMinutes">Duration (Minutes)</label>
+        <input class="form-control" asp-for="DurationInMinutes" type="number" />
+        <span asp-validation-for="DurationInMinutes" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Quality">Quality</label>
+        <select class="form-control" asp-for="Quality">
+            <option value="HD">HD</option>
+            <option value="Full HD">Full HD</option>
+            <option value="4K">4K</option>
+        </select>
+        <span asp-validation-for="Quality" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>

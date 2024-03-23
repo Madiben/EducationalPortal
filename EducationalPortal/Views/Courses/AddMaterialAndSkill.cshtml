@@ -1,0 +1,72 @@
+﻿@using EducationalPortal.ViewModels;
+@model AddMaterialAndSkillModelView
+
+<div>
+    <p class="fs-1 fw-bold">Available Materials:</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var material in Model.Materials)
+            {
+                <tr>
+                    <th scope="row">@material.MaterialId</th>
+                    <td>@material.Name</td>
+                    <td>@material.Description</td>
+                    <td>@material.Type</td>
+                    <td>
+                        <form method="post" asp-controller="Courses" asp-action="AddMaterial" asp-route-materialId="@material.MaterialId" asp-route-courseId="@Model.Id">
+                            <button class="btn btn-outline-success" type="submit">
+                                Add
+                            </button>
+                        </form>
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <p class="fs-1 fw-bold">Available Skills:</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Level</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var skill in Model.Skills)
+            {
+                <tr>
+                    <th scope="row">@skill.SkillId</th>
+                    <td>@skill.Name</td>
+                    <td>@skill.Level</td>
+                    <td>
+                        <form method="post" asp-controller="Courses" asp-action="AddSkill" asp-route-skillId="@skill.SkillId" asp-route-courseId="@Model.Id">
+                            <button class="btn btn-outline-success" type="submit">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <div class="d-flex justify-content-between text-center border border-success p-4 btn-group btn-group-lg">
+        <a class="btn btn-success btn-lg" role="button" asp-controller="Home" asp-action="Index">Finish</a>
+    </div>
+</div>

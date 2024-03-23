@@ -1,0 +1,47 @@
+﻿@using EducationalPortal.DataAccess.Models.Entities;
+@model List<Material>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (Model.Count == 0)
+    {
+        <h4>No data Available</h4>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var material in Model)
+                {
+                    <tr>
+                        <th scope="row">@material.MaterialId</th>
+                        <td>@material.Name</td>
+                        <td>@material.Description</td>
+                        <td>@material.Type</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@material.MaterialId">
+                                <img src="~/images/edit.png" class="icon" alt="Edit">
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@material.MaterialId">
+                                <img src="~/images/delete.png" class="icon" alt="Delete">
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    <a asp-action="Add">+ Add Contact</a>
+</div>

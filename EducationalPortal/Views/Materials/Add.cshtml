@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Add Material";
+}
+
+<h2>Create New Material</h2>
+<form method="post" asp-controller="Materials" asp-action="Add">
+<div>
+    <button type="submit" class="btn btn-primary" asp-controller="Materials" asp-action="AddBook">Add Book</button>
+    <button type="submit" class="btn btn-primary" asp-controller="Materials" asp-action="AddArticle">Add Article</button>
+    <button type="submit" class="btn btn-primary" asp-controller="Materials" asp-action="AddVideo">Add Video</button>
+</div>
+</form>

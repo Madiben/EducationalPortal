@@ -1,0 +1,114 @@
+﻿@using EducationalPortal.ViewModels;
+@model MyCoursesModelView
+
+@{
+    ViewData["Title"] = "MyProfile";
+}
+<div class="container">
+        <div class="d-flex justify-content-between text-center border border-success p-4 btn-group btn-group-lg">
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="User" asp-action="MyCourses" asp-route-id="@Model.Id">Enrolled Courses</a>
+        <a class="btn btn-outline-success btn-lg" role="button" asp-controller="User" asp-action="JoinCourse" asp-route-id="@Model.Id">Available Courses</a>
+            <a class="btn btn-outline-success btn-lg" role="button" asp-controller="Materials" asp-action="Materials" asp-route-id="@Model.Id">Materials List</a>
+            <a class="btn btn-outline-success btn-lg" role="button" asp-controller="SKills" asp-action="Skills" asp-route-id="@Model.Id">Skills List</a>
+        </div>
+</div>
+
+
+@if (Model.Courses != null)
+{
+    <div class="container">
+        <div class="text-start border border-danger">
+            <p class="fs-1 fw-bold">User Enrolled Courses:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Credit</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var course in Model.Courses)
+                    {
+                        <tr>
+                            <th scope="row">@course.CourseId</th>
+                            <td>@course.Course.Name</td>
+                            <td>@course.Course.Description</td>
+                            <td>@course.Course.Credit</td>
+                            <td>
+                                @if (course.CompletionPercentage == 100)
+                                {
+                                    <span class="badge bg-success">Completed</span>
+                                }
+                                else
+                                {
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: @course.CompletionPercentage" aria-valuenow="@course.CompletionPercentage" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-success" asp-action="StudyCourse" asp-route-userId="@Model.Id" asp-route-courseId="@course.CourseId">
+                                    <img src="~/images/study.png" class="icon" alt="Study">
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+@if (Model.Materials != null)
+{
+    <div class="container">
+        <div class="text-start border border-warning">
+            <p class="fs-1 fw-bold">User Enrolled Materials:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var material in Model.Materials)
+                    {
+                        <tr>
+                            <th scope="row">@material.MaterialId</th>
+                            <td>@material.Material.Name</td>
+                            <td>@material.Material.Description</td>
+                            <td>@material.Material.Type</td>
+                            <td>
+                                @if (material.IsCompleted)
+                                {
+                                    <span class="badge bg-success">Completed</span>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-outline-success" asp-action="StudyMaterial" asp-route-userId="@Model.Id" asp-route-materialId="@material.MaterialId">
+                                        <img src="~/images/study.png" class="icon" alt="Detail">
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+
+
+
+
+

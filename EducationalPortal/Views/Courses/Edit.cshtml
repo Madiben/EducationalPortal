@@ -1,0 +1,21 @@
+﻿@using EducationalPortal.DataAccess.Models.Entities;
+@model Course
+
+<form method="post" asp-controller="Courses" asp-action="Edit">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name" placeholder="Enter Name..." />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Description">Description</label>
+        <input class="form-control" asp-for="Description" placeholder="Enter Description..." />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Credit">Credit</label>
+        <input class="form-control" asp-for="Credit" placeholder="Enter Credit..." />
+        <span asp-validation-for="Credit" class="text-danger"></span>
+    </div>
+    <button type="submit" class="d-flex justify-content-between text-center btn btn-success p-4">Submit</button>
+</form>

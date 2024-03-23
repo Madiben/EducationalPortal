@@ -1,0 +1,48 @@
+﻿@using EducationalPortal.DataAccess.Enums;
+@using EducationalPortal.DataAccess.Models.Entities;
+@model Book
+@{
+    ViewData["Title"] = "Add Book";
+}
+<form method="post" asp-controller="Materials" asp-action="EditBook">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Description">Description</label>
+        <input class="form-control" asp-for="Description" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Authors">Authors</label>
+        <input class="form-control" asp-for="Authors" />
+        <span asp-validation-for="Authors" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Pages">Pages</label>
+        <input class="form-control" asp-for="Pages" />
+        <span asp-validation-for="Pages" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Format">Format</label>
+        <input class="form-control" asp-for="Format" />
+        <span asp-validation-for="Format" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="YearOfPublication">Year of Publication</label>
+        <input class="form-control" asp-for="YearOfPublication" type="number" />
+        <span asp-validation-for="YearOfPublication" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>

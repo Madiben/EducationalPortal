@@ -1,0 +1,19 @@
+﻿@using EducationalPortal.DataAccess.Enums;
+@using EducationalPortal.DataAccess.Models.Entities;
+@model Skill
+
+<form method="post" asp-controller="Skills" asp-action="Add">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name" placeholder="Enter Name..." />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Level">Skill Level</label>
+        <select asp-for="Level" asp-items="@Html.GetEnumSelectList<SkillLevel>()">
+            <option>--Select</option>
+        </select>
+        <span asp-validation-for="Level" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

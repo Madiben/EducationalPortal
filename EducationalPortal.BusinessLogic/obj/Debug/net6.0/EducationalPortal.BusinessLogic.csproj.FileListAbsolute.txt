@@ -1,0 +1,17 @@
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.BusinessLogic.deps.json
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.BusinessLogic.runtimeconfig.json
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.BusinessLogic.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.BusinessLogic.pdb
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.DataAccess.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\bin\Debug\net6.0\EducationalPortal.DataAccess.pdb
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.AssemblyInfo.cs
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.csproj.CopyComplete
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\refint\EducationalPortal.BusinessLogic.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.pdb
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\EducationalPortal.BusinessLogic.genruntimeconfig.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\EducationalPortal.BusinessLogic\obj\Debug\net6.0\ref\EducationalPortal.BusinessLogic.dll
