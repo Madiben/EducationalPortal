@@ -1,0 +1,14 @@
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\bin\Debug\net6.0\EducationalPortal.DataAccess.deps.json
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\bin\Debug\net6.0\EducationalPortal.DataAccess.runtimeconfig.json
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\bin\Debug\net6.0\EducationalPortal.DataAccess.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\bin\Debug\net6.0\EducationalPortal.DataAccess.pdb
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.AssemblyInfo.cs
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\refint\EducationalPortal.DataAccess.dll
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.pdb
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\EducationalPortal.DataAccess.genruntimeconfig.cache
+C:\Users\Mahdi Bentaleb\source\repos\EducationalPortal\DataAccess\obj\Debug\net6.0\ref\EducationalPortal.DataAccess.dll
